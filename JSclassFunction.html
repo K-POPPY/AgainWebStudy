@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트의 클래스란?</title>
+</head>
+
+<body>
+    <h1>자바스크립트의 클래스란?</h1>
+
+    <p><strong>클래스는 객체 지향 프로그래밍에서 특정 객체를 생성하기 위해 변수와 메소드를 정의하는 일종의 틀로, 객체를 정의하기 위한 상태(멤버 변수)와 메서드(함수)로 구성된다.</strong></p>
+    <p>html 파일에 실습내용 있음</p>
+
+    <a href="https://ko.javascript.info/class">👉 class 더알아보기 상세</a><br />
+    <a href="https://ordinary-code.tistory.com/22">👉 class 더알아보기 요점</a>
+</body>
+
+<script>
+    class Person {
+        constructor(name, age, city) {
+            // console.log('construtor');
+            this.name = name;
+            this.age = age;
+            this.city = city;
+        }
+        // 메서드 생성
+        nextYearAge() {
+            return Number(this.age) + 1;
+        }
+    }
+    let lee = new Person('lee', 35, 'seoul');
+
+    // class 밖에서 새로운 메서드 생성
+    lee.food = function () {
+        return 'apple'
+    }
+
+    console.log('당신는 내년에 몇살인가요?' + lee.nextYearAge() + '살 입니다.');
+    console.log('좋아하는 과일은요?' + lee.food());
+
+    let kim = new Person('kim', 33, 'sungnam');
+
+    console.log('당신은 몇살?' + kim.nextYearAge());
+
+    /* class  Person 밖에서 추가한 함수는 new Person class 로 만는 새로운 객체 kim에는 사용못함 
+    console.log('먹고싶은건?' + kim.food());  -> Uncaught TypeError: kim.food is not a function */
+
+    // 상속 : extends
+    class introducePerson extends Person {
+        introduce() {
+            return `저는 ${this.city}에 사는 ${this.name} 입니다.`
+        }
+    }
+    let park = new introducePerson('park', 22, 'hannam');
+    console.log(park.introduce());
+</script>
+
+</html>
