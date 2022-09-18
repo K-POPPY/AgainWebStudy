@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04. 웹문서에 다양한 내용 입력하기</title>
+  <style>
+    .test {padding: 10px; background-color: #fcd7dd;}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="content4">04. 웹문서에 다양한 내용 입력하기 tag</h1>
+    <nav>
+      <ul>
+        <li><a href="#content4-1">04-1. 택스트 입력하기 👉</a></li>
+        <li><a href="#content4">맨위로 👉</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="content4-1">
+      <h2>04-1. 택스트 입력하기</h2>
+      <h3>1. &#60;hn&#62;&#60;/hn&#62; 태그</h3>
+      <p>h는 heading의 줄임말. n에는 1~6의 숫자가 들어가며 제목 택스트를 크기별로 표시. &#60;h1&#62;이 가장 큰제목
+        &#60;h2&#62;,&#60;h3&#62;...&#60;h6&#62;순서대로 작아짐.</p>
+      <div class="test">
+        <h1>안녕! 나는 h태그중 제일 큰 &#60;h1&#62; 태그야!</h1>
+        <h2>안녕! 나는 &#60;h2&#62; 태그야!</h2>
+        <h3>안녕! 나는 &#60;h3&#62; 태그야!</h3>
+        <h4>안녕! 나는 &#60;h4&#62; 태그야!</h4>
+        <h5>안녕! 나는 &#60;h5&#62; 태그야!</h5>
+        <h6>안녕! 나는 h태그중 제일 작은 &#60;h6&#62; 태그야!</h6>
+      </div>
+
+      <h3>2. &#60;p&#62;&#60;/p&#62;와 &#60;br&#62;&#60;/br&#62; 태그</h3>
+      <p>&#60;p&#62; : 문단(paragraph)을 정의함. 단락. &#60;p&#62;와 &#60;/p&#62; 사이에 텍스트 입력시 앞뒤로 빈 줄이 생기며 텍스트 단락이 만들어짐.</p>
+      <p>&#60;br /&#62; : 단순 행 바꿈(line-break)을 정의함. 닫는 태그가 필요없음. </p>
+      <p>&#60;p&#62; 와 &#60;br /&#62; 의 차이 : &#60;br /&#62;을 두 번 사용하면 빈 줄이 생기면서 텍스트 단락이 나뉜것 처럼 화면에 표시되지만 실제로는 단락이 만들어진 게
+        아니므로 단락을 만들때에는 &#60;p&#62; 태그를 사용해야 함.</p>
+      <div class="test">
+        <h4>이하이 - ONLY</h4>
+        <p>
+          Be my only one 이렇게 부르고 싶은 이름 내 곁에 손을 잡고서 같이 걸어요 <br />
+          비가 오는 밤에도 외로웠던 낮에도 그대 환한 빛깔을 내게 가득 칠해줘요 <br />
+          내가 더 잘할게요 이렇게 같이 있어준다면
+        </p>
+        <p>
+          Now I believe 라랄라랄라라 부르는 노래 <br />
+          찾고 찾고 찾아 헤매이던 그대와 <br />
+          My, oh my, oh my, oh 내 사랑 Be my only love
+        </p>
+      </div>
+
+      <h3>3. &#60;blockquote&#62;&#60;/blockquote&#62; 태그</h3>
+      <p>인용문. 태그안의 내용을 인용문으로 알고 다른 텍스트보다 약간 들여 씀. 화면 낭독기에서도 다른 텍스트와 구분함</p>
+      <div class="test">
+        <h4>이하이 - ONLY</h4>
+        <p>
+          Be my only one 이렇게 부르고 싶은 이름 내 곁에 손을 잡고서 같이 걸어요 <br />
+          비가 오는 밤에도 외로웠던 낮에도 그대 환한 빛깔을 내게 가득 칠해줘요 <br />
+          내가 더 잘할게요 이렇게 같이 있어준다면
+        </p>
+        <p>
+          Now I believe 라랄라랄라라 부르는 노래 <br />
+          찾고 찾고 찾아 헤매이던 그대와 <br />
+          My, oh my, oh my, oh 내 사랑 Be my only love
+        </p>
+        <p>
+          걸어 걸어가는 발걸음마다 <br />
+          기분 좋아 꼭 둘이서 추는 춤 같아 <br />
+        </p>
+        <blockquote>My, oh my, oh my, oh 내 사랑 Be my only love</blockquote>
+      </div>
+
+      <h3>4. &#60;strong&#62;&#60;/strong&#62;과 &#60;b&#62;&#60;/b&#62; 태그</h3>
+      <p>&#60;strong&#62; : 굵게 <u>강조할</u> 텍스트</p>
+      <p>&#60;b&#62; : 굵게 표시할 텍스트</p>
+      <p>보기엔 차이가 느껴지지 않지만 화면 낭독기에서는 구분을 하기때문에 경고나 주의 사항처럼 중요한 내용을 강조할때는  &#60;strong&#62;, 단순히 글자만 굵게 표시할 때는  &#60;b&#62; 태그를 사용함.</p>
+      <div class="test">
+        <h4>이하이 - ONLY</h4>
+        <p>
+          Be my only one 이렇게 부르고 싶은 이름 내 곁에 손을 잡고서 같이 걸어요 <br />
+          비가 오는 밤에도 외로웠던 낮에도 <strong>그대 환한 빛깔을 내게 가득 칠해줘요</strong> <br />
+          내가 더 잘할게요 이렇게 같이 있어준다면
+        </p>
+        <p>
+          Now I believe 라랄라랄라라 부르는 노래 <br />
+          찾고 찾고 찾아 헤매이던 그대와 <br />
+          My, oh my, oh my, oh 내 사랑 Be my only love
+        </p>
+        <p>
+          걸어 걸어가는 발걸음마다 <br />
+          기분 좋아 꼭 둘이서 추는 춤 같아 <br />
+        </p>
+        <blockquote>My, oh my, oh my, oh 내 사랑 Be my only love</blockquote>
+        <p>
+          Be my only one 이제는 숨기지 않고도 말할 수 있어 <br />
+          그렇게나 말하고 싶던 <b>I say I love you</b>
+        </p>
+        <p>
+          쉬고 싶은 밤에도 바쁘던 아침에도
+          그대 내게 쉴 곳을 마음속에 마련해요 <br />
+          내가 더 잘할게요 그 맘을 내게 나눠준다면
+        </p>
+      </div>
+
+      <h3></h3>
+      <div class="test"></div>
+
+      <h3></h3>
+      <div class="test"></div>
+
+      <h3></h3>
+      <div class="test"></div>
+    </section>
+    <hr />
+    <section id="content4-2">
+      <h2></h2>
+      <div class="test"></div>
+    </section>
+    <hr />
+    <section id="content4-3">
+      <h2></h2>
+      <div class="test"></div>
+    </section>
+    <hr />
+    <section id="content4-4">
+      <h2></h2>
+      <div class="test"></div>
+    </section>
+    <hr />
+    <section id="content4-5">
+      <h2></h2>
+      <div class="test"></div>
+    </section>
+    <hr />
+    <section id="content4-6">
+      <h2></h2>
+      <div class="test"></div>
+    </section>
+    <hr />
+    <section id="content4-7">
+      <h2></h2>
+      <div class="test"></div>
+    </section>
+    <hr />
+    <section id="content4-test">
+      <h2></h2>
+      <div class="test"></div>
+    </section>
+  </main>
+</body>
+
+</html>
