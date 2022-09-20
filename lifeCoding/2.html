@@ -4,17 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB1- javascript</title>
+    <title>부록 : 코드의 힘 - 채팅 기능 추가</title>
 </head>
 <body>
-    <h1><a href="index.html">WEB</a></h1>
+    <h1><a href="index.html">생활코딩  WEB1 부록 : 코드의 힘</a></h1>
     <ol>
-        <li><a href="index.html">HTML</a></li>
-        <li><a href="1.html">CSS</a></li>
-        <li><a href="2.html">JavaScript</a></li>
+        <li><a href="index.html">[동영상 삽입] iframe</a></li>
+        <li><a href="1.html">[댓글 기능 추가] DISQUS</a></li>
+        <li><a href="2.html">[채팅 기능 추가] tawk.to</a></li>
     </ol>
-    <h2>JavaScript</h2>
-    JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+    <h2>[채팅 기능 추가] tawk.to</h2>
+    <h3>이짜나언짜나 - 느슨해진 힙합씬에 긴장감을 줘</h3>
+    <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/q-2wrxTESKM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </p>
+    <p>
+        <a href="https://www.youtube.com/channel/UCCXRC4jNPgwjPoCml9jG2nw/" target="_blank" title="이짜나언짜아 유튜브">킹받으러
+            가기~</a>
+    <p>[MV] <strong>빵댕이 흔들어라</strong> (Twerk it) - <u>이짜나언짜나</u> EZUZ</p>
+    </p>
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://web1-nhzoxwh8q5.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
 </body>
 </html>
 

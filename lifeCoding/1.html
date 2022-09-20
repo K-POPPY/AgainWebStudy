@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB1- css</title>
+    <title>부록 : 코드의 힘 - 댓글 기능 추가</title>
 </head>
+
 <body>
-    <h1><a href="index.html">WEB</a></h1>
+    <h1><a href="index.html">생활코딩  WEB1 부록 : 코드의 힘</a></h1>
     <ol>
-        <li><a href="index.html">HTML</a></li>
-        <li><a href="1.html">CSS</a></li>
-        <li><a href="2.html">JavaScript</a></li>
+        <li><a href="index.html">[동영상 삽입] iframe</a></li>
+        <li><a href="1.html">[댓글 기능 추가] DISQUS</a></li>
+        <li><a href="2.html">[채팅 기능 추가] tawk.to</a></li>
     </ol>
-    <h2>CSS</h2>
-    Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language. Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.
+    <h2>[댓글 기능 추가] DISQUS</h2>
+    <h3>이짜나언짜나 - 느슨해진 힙합씬에 긴장감을 줘</h3>
+    <p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/q-2wrxTESKM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </p>
+    <p>
+        <a href="https://www.youtube.com/channel/UCCXRC4jNPgwjPoCml9jG2nw/" target="_blank" title="이짜나언짜아 유튜브">킹받으러
+            가기~</a>
+    <p>[MV] <strong>빵댕이 흔들어라</strong> (Twerk it) - <u>이짜나언짜나</u> EZUZ</p>
+    </p>
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://web1-nhzoxwh8q5.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
 </body>
+
 </html>
-
-
-
-
-
