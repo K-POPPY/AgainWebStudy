@@ -6,45 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>04. 웹문서에 다양한 내용 입력하기</title>
+  <link rel="stylesheet" href="../common/commoon.css">
   <style>
-    a {
-      text-decoration: none;
+    .con4-3 {
+      height: 380px;
     }
-    h1 {
-      text-align: center;
+    .img {
+      width: 400px; 
+      height: 380px;
     }
-    main {
-      width: 1000px;
-      margin: 50px auto;
-    }
-    nav {
-      position: fixed;
-      top: 10px;
-      right: 5px;
-      width: 360px;
-      border: solid 1px #000000;
-      background-color: #faebd7;
-    }
-    .test {
-      padding: 10px;
-      background-color: #fcd7dd;
-    }
-    #content4-3 img {
-      width: 300px
-    }
-    table, tr, th, td {
-      border: solid 1px #000;
-      border-collapse: collapse;
-    }
-    tr, th, td {
-      padding: 10px;
+    .text {
+      padding-left: 10px;
+      height: 300px;
+      transform: translateY(-100%);
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h1 id="content4">04. 웹문서에 다양한 내용 입력하기 tag</h1>
+    <h1 id="content4">04. 웹문서에 다양한 내용 입력하기</h1>
     <nav>
       <ul>
         <li><a href="#content4-1">04-1. 택스트 입력하기 👉</a></li>
@@ -251,7 +231,7 @@
           <li>탄수화물(밥)</li>
         </ol>
       </div>
-      <p>test속성으로 시작번호를 바꿀수 있음.</p>
+      <p>start 속성으로 시작번호를 바꿀수 있음.</p>
       <div class="test">
         <i>영양소가 골고루 된 식사를 준비한다.</i> <br />
         <br />
@@ -265,6 +245,7 @@
           <li>탄수화물(밥)</li>
         </ol>
       </div>
+
       <h3>2. &#60;ul&#62;&#60;ul&#62;</h3>
       <p>&#60;ul&#62; : 순서가 없는 목록. Unordered List. 항목 앞에 작은 원이나 사각형을 붙여서 구분는데 이런 작을 그림을 불릿<sup>bullet</sup>이라고 함.</p>
       <div class="test">
@@ -275,6 +256,7 @@
           <li>탄수화물(밥)</li>
         </ul>
       </div>
+
       <h3>3. &#60;dl&#62;&#60;/dl&#62;, &#60;dt&#62;&#60;/dt&#62;, &#60;dd&#62;&#60;/dd&#62;</h3>
       <p>
         설명목록. 설명목올이란 이름과 값 형태로 된 목록. 마치 사전에서 단어명과 설명이 있는 모습과 비슷. <br />
@@ -304,7 +286,14 @@
     <section id="content4-3">
       <h2>04-3 표 만들기</h2>
       <h3>1. 표 만들기</h3>
-      <p><img src="../images/img04-3_0.jpg" alt="표의 형태와 구성 요소"> 표<sup>table</sup>는 행<sup>row</sup>과 열<sup>column</sup>그리고 셀<sup>cell</sup>로 이루어짐</p>
+      <div class="con4-3">
+        <span class="img">
+          <img style="width:100%;" src="../images/img04-3_0.jpg" alt="표의 형태와 구성 요소">
+        </span>
+        <span class="text">
+          표<sup>table</sup>는 행<sup>row</sup>과 열<sup>column</sup>그리고 셀<sup>cell</sup>로 이루어짐
+        </span>
+      </div>
       <p>
         &#60;table&#62;&#60;/table&#62; : 표의 시작과 끝 / table <br />
         &#60;caption&#62;&#60;/caption&#62; : 표의 제목, 생략가능 <br />
@@ -324,7 +313,8 @@
           </tr>
         </table>
       </div>
-      <h3>표의 구조</h3>
+
+      <h3>2. 표의 구조</h3>
       <p>
         일부 표에서는 제목이 표시된 셀과 자료가 표시된 셀 외에 표 아래쪽에 합치거나 요약 내용을 표시하기도함. <br />
         이런 표는 제목과 본문 그리고 요약이 있는 부분으로 표의 구조를 나누어 놓는 것이 좋음. <br />
@@ -355,7 +345,7 @@
               <td>3kg</td>
               <td>11~16과</td>
               <td>35,000원</td>
-              <td rowspan="4"><img src="../images/img04-3_1.jpg" alt="표 구조화 하기"></td>
+              <td rowspan="4"><img style="width: 350px;" src="../images/img04-3_1.jpg" alt="표 구조화 하기"></td>
             </tr>
             <tr>
               <td>선물용</td>
@@ -379,7 +369,17 @@
         </table>
       </div>
      
-    </section>
+      <h3>3. 행이나 열을 합치는 rowspan, colspan</h3>
+      <p>표는여러 셀로 구성됨. 행이나 여을 합치는 것은 실제로는 셀을 합치는 것이므로 &#60;td&#62;태그나 &#60;th&#62; 태그에서 이뤄짐.</p>
+      <div class="con4-3">
+        <span class="img">
+          <img style="width: 100%" src="../images/img04-3_2.jpg" alt="행과 열을 합칠때 쓰는 속성" />
+        </span>
+        <span class="text">
+          rowspan : 행을 합칠 때 사용. <br />
+          colspan : 열을 합칠 때 사용.
+        </span>
+      </div>
     <hr />
 
     <section id="content4-4">

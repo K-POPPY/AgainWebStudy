@@ -1,0 +1,32 @@
+a {
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+}
+span {
+  display: inline-block;
+}
+main {
+  width: 1000px;
+  margin: 50px auto;
+}
+nav {
+  position: fixed;
+  top: 10px;
+  right: 5px;
+  width: 360px;
+  border: solid 1px #000000;
+  background-color: #faebd7;
+}
+.test {
+  padding: 10px;
+  background-color: #fcd7dd;
+}
+table, tr, th, td {
+  border: solid 1px #000;
+  border-collapse: collapse;
+}
+tr, th, td {
+  padding: 10px;
+}
