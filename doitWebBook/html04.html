@@ -11,10 +11,12 @@
     .con4-3 {
       height: 380px;
     }
+
     .img {
-      width: 400px; 
+      width: 400px;
       height: 380px;
     }
+
     .text {
       padding-left: 10px;
       height: 300px;
@@ -22,18 +24,26 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1 id="content4">04. 웹문서에 다양한 내용 입력하기</h1>
     <nav>
       <ul>
+        <li>
+          <a href="#audioContrls">🎶 BGM 설정하러 가기 👉</a>
+          <br /><br />
+        </li>
         <li><a href="#content4-1">04-1. 택스트 입력하기 👉</a></li>
         <li><a href="#content4-2">04-2. 목록 만들기 👉</a></li>
         <li><a href="#content4-3">04-3. 표 만들기 👉</a></li>
-        <li><a href="#content4-4">04-4. 표 만들기 👉</a></li>
-        <li><a href="#content4-5">04-5. 표 만들기 👉</a></li>
-        <li><a href="#content4-6">04-6. 표 만들기 👉</a></li>
-        <li><a href="#content4">맨위로 👉</a></li>
+        <li><a href="#content4-4">04-4. 이미지 삽입하기 👉</a></li>
+        <li><a href="#content4-5">04-5. 오디오와 비디오 삽입하기 👉</a></li>
+        <li>
+            <a href="#content4-6">04-6. 하이퍼링크 삽입하기 👉</a>
+            <br /><br />
+        </li>
+        <li><a href="#content4">맨위로 ☝</a></li>
       </ul>
     </nav>
   </header>
@@ -163,7 +173,7 @@
       <p class="test"><abbr title="Emoticon">귀여운 이모티콘 ヾ(≧▽≦*)o</abbr></p>
       <p>&#60;cite&#62; : 웹 문서나 포스트에서 참고 내용을 표시.</p>
       <p class="test">"넌 새야. 너도 새라고해.", "네가 새면 나도 새야" - 영화, <cite>'노트북' 중</cite></p>
-      <p>&#60;code&#62; : 컴푸터 인식을 위한 소스 코드</p>
+      <p>&#60;code&#62; : 컴퓨터 인식을 위한 소스 코드</p>
       <p class="test"><code>function savetheLoocal()</code> / function savetheLoocal()</p>
       <p>&#60;small&#62; : 부가 정보초럼 작게 표시해도 되는 택스트.</p>
       <p class="test">가격: 13,000원 <small>(부가세 별도)</small></p>
@@ -264,12 +274,12 @@
         &#60;dt&#62; 태그 하나에 &#60;dd&#62; 태그를 여러개 사용할 수 있음.
       </p>
       <p>
-        &#60;dl&#62;&#60;/dl&#62; : 설명 목록. Description List. <br />
-        &#60;dt&#62;&#60;/dt&#62; : 이름<sup>name</sup> <br />
-        &#60;dd&#62;&#60;/dd&#62; : 값<sup>value</sup>
+        &#60;dl&#62; : 설명 목록. Description List. <br />
+        &#60;dt&#62; : 이름<sup>name</sup> <br />
+        &#60;dd&#62; : 값<sup>value</sup>
       </p>
       <div class="test">
-        <b>키토제닉 식단</b>
+        <span><b>키토제닉 식단</b></span>
         <dl>
           <dt>당질이 적어 많이 먹어도 되는 것</dt>
           <dd>채소</dd>
@@ -284,7 +294,7 @@
     <hr />
 
     <section id="content4-3">
-      <h2>04-3 표 만들기</h2>
+      <h2>04-3. 표 만들기</h2>
       <h3>1. 표 만들기</h3>
       <div class="con4-3">
         <span class="img">
@@ -295,11 +305,11 @@
         </span>
       </div>
       <p>
-        &#60;table&#62;&#60;/table&#62; : 표의 시작과 끝 / table <br />
-        &#60;caption&#62;&#60;/caption&#62; : 표의 제목, 생략가능 <br />
-        &#60;tr&#62;&#60;tr/&#62; : 행 / row <br />
-        &#60;th&#62;&#60;/th&#62; : 제목행에 셀만들때. 진하게 표시되고 셀 안에서  중앙에 배열되어 다른내용보다 눈에 띔 <br />
-        &#60;td&#62;&#60;/td&#62; : 행 안에 셀을만듬 / cell   
+        &#60;table&#62; : 표의 시작과 끝 / table <br />
+        &#60;caption&#62;: 표의 제목, 생략가능 <br />
+        &#60;tr&#62; : 행 / row <br />
+        &#60;th&#62;; : 제목행에 셀만들때. 진하게 표시되고 셀 안에서 중앙에 배열되어 다른내용보다 눈에 띔 <br />
+        &#60;td&#62; : 행 안에 셀을만듬 / cell
       </p>
       <div class="test">
         <table>
@@ -318,13 +328,15 @@
       <p>
         일부 표에서는 제목이 표시된 셀과 자료가 표시된 셀 외에 표 아래쪽에 합치거나 요약 내용을 표시하기도함. <br />
         이런 표는 제목과 본문 그리고 요약이 있는 부분으로 표의 구조를 나누어 놓는 것이 좋음. <br />
-        표의 구조를 지정하면 웹 브라우저 화면에서 보이진 않지만, 화면 낭독기나 자바스크립트<small>(표의 본문이 길어 한 화면을 넘어갈 경우, 자바스크립트를 이용헤 &#60;thead&#62;와 &#60;tfoot&#62;태그는 표의 위아래에 고정하고 &#60;hbody&#62;태그만 스크롤 하게 만들수 있음 -> 이 방법은 내용이 긴 표를 여러 장 인쇄할 때도 가 장마다 표의 제목, 요약 부분이 자동으로인쇄 되므로 편리함.)</small> 등에서 읽을 수 있음. <br />
+        표의 구조를 지정하면 웹 브라우저 화면에서 보이진 않지만, 화면 낭독기나 자바스크립트<small>(표의 본문이 길어 한 화면을 넘어갈 경우, 자바스크립트를 이용헤 &#60;thead&#62;와
+          &#60;tfoot&#62;태그는 표의 위아래에 고정하고 &#60;hbody&#62;태그만 스크롤 하게 만들수 있음 -> 이 방법은 내용이 긴 표를 여러 장 인쇄할 때도 가 장마다 표의 제목, 요약
+          부분이 자동으로인쇄 되므로 편리함.)</small> 등에서 읽을 수 있음. <br />
         또한 CSS를 사용해 제목, 본문, 요약에 각각 다른 스타일을 적용할 수도 있음.
       </p>
       <p>
-        &#60;thead&#62;&#60;/thead&#62; : 표의 제목 / head <br />
-        &#60;tbody&#62;&#60;/tbody&#62; : 표의 본문 / body <br />
-        &#60;tfoot&#62;&#60;/tfoot&#62; : 표의 요약 / foot  
+        &#60;thead&#62; : 표의 제목 / head <br />
+        &#60;tbody&#62; : 표의 본문 / body <br />
+        &#60;tfoot&#62; : 표의 요약 / foot
       </p>
       <div class="test">
         <h4>상품구성</h4>
@@ -368,7 +380,7 @@
           </tbody>
         </table>
       </div>
-     
+
       <h3>3. 행이나 열을 합치는 rowspan, colspan</h3>
       <p>표는여러 셀로 구성됨. 행이나 여을 합치는 것은 실제로는 셀을 합치는 것이므로 &#60;td&#62;태그나 &#60;th&#62; 태그에서 이뤄짐.</p>
       <div class="con4-3">
@@ -376,41 +388,232 @@
           <img style="width: 100%" src="../images/img04-3_2.jpg" alt="행과 열을 합칠때 쓰는 속성" />
         </span>
         <span class="text">
-          rowspan : 행을 합칠 때 사용. <br />
-          colspan : 열을 합칠 때 사용.
+          rowspan : 행끼리 합칠 때 사용. <br />
+          colspan : 열끼리 합칠 때 사용.
         </span>
       </div>
-    <hr />
 
-    <section id="content4-4">
-      <h2></h2>
-      <div class="test"></div>
-    </section>
-    <hr />
+      <h3>4. 열을 묶어 주는 &#60;col&#62;&#60;/col&#62;, &#60;colgroup&#62;&#60;/colgroup&#62; 태그</h3>
+      <p>꼭 &#60;caption&#62; 다음에 사용해야 함. 표의 내용이 시작되기 전에 열의 상태를 알려주는것. 특정 열에 배경색을 넣거나 너비를 바꾸기위해 원하는 열을 선택할때 사용.</p>
+      <p>
+        &#60;col&#62; : 열을 1개만 지정. 스타일 속성을 지정하지 않을거라 해도 &#60;colgroup&#62; 안에 표 전체 열의 갯수만큼 &#60;col&#62; 태그를 넣어야함. 공통
+        스타일을 사용하기 위해 span 속성으로 묶어서 스타일 지정 하고 span 으로 묶어준만큼 &#60;col&#62; 삭제.<br />
+        &#60;colgrop&#62; : &#60;col&#62; 태그를 2개이상 묶어서 사용.
+      </p>
+      <div class="test">
+        <table>
+          <caption>먹거리 <br /><br /></caption>
+          <colgroup>
+            <col style="background-color:#f1adad;">
+            <col span=4" style="background-color:#eee;">
+            <col style="width:400px; background-color:#eee;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th style="background-color:#f1adad;">음식</th>
+              <th style="background-color:#f1adad;">판매시간</th>
+              <th style="background-color:#f1adad;">판매위치</th>
+              <th style="background-color:#f1adad;">가격</th>
+              <th style="background-color:#ec7272;">코드</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>입춘 전남 국수</td>
+              <td>11:00 ~ 16:00</td>
+              <td rowspan="2">목관아 주차장</td>
+              <td>7000원</td>
+              <td rowspan="4"><img src="../images/img04-3_3..png" width="400px" alt="현재 table CODE"></td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>제주 향토 음식</td>
+              <td>10:30 ~ 17:00</td>
+              <td>13000원</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>입춘 주전부리</td>
+              <td>10:30 ~ 17:00</td>
+              <td>푸른 잔디</td>
+              <td>3000원 ~ 8000원</td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td>차 나눔</td>
+              <td>10:30 ~ 18:00</td>
+              <td>관덕정 마당</td>
+              <td>무료</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
 
+      <section id="content4-4">
+        <h2>04-4. 이미지 삽입하기</h2>
+        <h3>1. &#60;img&#62;</h3>
+        <p>
+          <span class="code">기본형 : &#60;img src="이미지 파일 경로" alt="화면 낭독기, 이미지를 로드하시 못할시 대체용 텍스트"&#62;</span> <br />
+          웹에서 사용하는 이미지는 인터넷으로 전송해야 하므로 파일 크기가 크지 않으면서 화질이 좋아야함.
+        </p>
+        <br />
+        <span><b>🖼 웹에서 사용하는 대표적인 이미지 파일 형식</b></span>
+        <dl>
+          <dt><u>GIF (Graphic Interchange format)</u></dt>
+          <dd>표시할 수 있는 색상 수 256가지. 다른 이미지 파일 형식에 비해 파일 크기가 작어서 아이콘이나 불릿 등 작은 이미지에 사용.</dd>
+          <dl>
+            <dt><u>JPG/JPEG (Joint Photoographic Experts Group)</u></dt>
+            <dd>GIF보다 색상과 명암을 다양하게 표현. 수정,저장 작업을 반복하면 화질이 떨어질수 있음.</dd>
+          </dl>
+          <dl>
+            <dt><u>PNG (Portable etwork Graphic)</u></dt>
+            <dd>네트워크용으록발된 파일 형식. 색상을 다양하게 표현하면서 투명한 배경도 만들수있어 웹에서 가장 많이 사용.</dd>
+          </dl>
 
-    <section id="content4-5">
-      <h2></h2>
-      <div class="test"></div>
-    </section>
-    <hr />
+          <h3>2. 이미지 크기를 조절하는 width, height 속성</h3>
+          <p>&#60;img&#62;태그로 파일을 삽입하면 원래 이미지 크기대로 표시. width, height 둘중 하나의 속성만 지정해도 나머지 속성은 자동으로 계산해 노출.</p>
+          <dl>
+            <dt><u>단위 %</u></dt>
+            <dd>부모 너비와 높이를 기준으로 이미지 크기 결정.</dd>
+          </dl>
+      </section>
+      <hr />
 
-    <section id="content4-6">
-      <h2></h2>
-      <div class="test"></div>
-    </section>
-    <hr />
+      <section id="content4-5">
+        <h2>04-5. 오디오와 비디오 삽입하기</h2>
+        <h3>1. &#60;object&#62;&#60;/object&#62;, &#60;embed&#62;, &#60;audio&#62;&#60;/audio&#62;,
+          &#60;video&#62;&#60;/video&#62;</h3>
+        <dl>
+          <dt>1. <u>&#60;object&#62;</u></dt>
+          <dd>오디오 파일뿐만 아니라 비디오, 자바 애플릿, PDF등 다양한 멀티미디어 파일 삽입할 때 사용.</dd>
+          <dd class="code">기본형 : &#60;object width="너비" height="높이"
+            data="파일"&#62;&#60;/object&#62;</dd>
+          <dd>data속성에서 보여 줄 멀티미디어 파일을 지정. &#60;object&#62; 태그를 사용하여 웹 문서에 PDF 파일을 삽입하면 PDF 리더가 자동으로 포함되어 보여 줌.</dd>
+        </dl>
+        <dt id="audioContrls">2. <u>&#60;embed&#62;</u></dt>
+        <dd>HTML 초기 버전부터 사용해서 대부분의 브라우저에서 사용 가능.</dd>
+        <dd class="code">기본형 : &#60;embed src="파일 경로" width="너비"
+          height="높이"&#62;</dd>
+        <dd>&#60;audio&#62;, &#60;video&#62;, &#60;object&#62;&#60; 태그를 지원하지 않는 웹브라우저에서 멀티미지어 파일을 삽입할 경우.</dd>
+        <dd class="test">
+          <h4>이하이 - ONLY</h4>
+          <embed src="../medias/이하이 - ONLY.mp3" type="audio/mpeg" />
+        </dd>
+        </dl>
+        <dl>
+          <dt>3. <u>&#60;audio&#62;, &#60;video&#62;</u></dt>
+          <dd>
+            HTML4 까진 멀티미디어 파일을 삽입한 후 재생하라면 플러그인 프로그램이 따로 필요했으나 HTML5 웹 표준이 정해지면서 &#60;audio&#62; - 오디오파일 삽입,
+            &#60;video&#62; - 비디오파일 삽입 태그가 추가되면서 멀티미디어 파일을 삽입하고 바로 재생가능. <br />
+            따라서 웹 브라우저에서 바로 멀티미디어 파일을 재생하기 때문에 브라우저마다 플레이어가 다름.(같은 브라우저라 하더라도 버전에 따라 지원 상황이 달라질수 있음.)
+          </dd>
+          <dd class="code">
+            기본형 <br />
+            &#60;audio src="오디오 파일 경로"&#62;&#60;/audio&#62; <br />
+            &#60;audio src="비디오 파일 경로"&#62;&#60;/audio&#62;
+          </dd>
+          <dd>태그를 사용할때 오디오나 비디오 파일을 시작하거나 멈출 수 있는 컨트롤바룰 표시해 주는 controls 속성</dd>
+          <dd class="code">
+            &#60;audio src="오디오 파일 경로 controls "&#62;&#60;/audio&#62; <br />
+            <span class="test">
+              <h4>이하이 - ONLY</h4>
+              <audio src="../medias/이하이 - ONLY.mp3" controls ></audio>
+            </span> <br />
+            <br />
+            &#60;video src="비디오 파일 경로 controls  autoplay loop "&#62;&#60;/video&#62; <br />
+            <span class="test">
+              <video src="../medias/flower.mp4" autoplay loop ></video>
+            </span> <br />
+            비디오파일의 경우 너비값을 지정하지 않는 경우 웹브라우저에 가득 차게 나타나믈로 너빗값을 적절히 지정하는게 좋음
+          </dd>
+        </dl>
+        <h3>2. &#60;audio&#62;, &#60;video&#62; 태그의 속성</h3>
+        <table style="width:100%">
+          <caption></caption>
+          <colgroup>
+            <col style="width:30%;">
+            <col style="width:70%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th style="background-color:#f1adad;">종류</th>
+              <th style="background-color:#f1adad;">설명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>controls</th>
+              <td>플레이어 화면에 컨트롤 바를 표시</td>
+            </tr>
+            <tr>
+              <th>autplay</th>
+              <td>
+                자동으로 실행. <br />
+                대부분의 웹 브라우저에서는 소리가 있는 파일의 자동재생을 금하고 있음. Microsoft엣지는 자동재생됨.
+              </td>
+            </tr>
+            <tr>
+              <th>loop</th>
+              <td>반복 재생</td>
+            </tr>
+            <tr>
+              <th>muted</th>
+              <td>
+                소리를 제거 <br />
+                &#60;video&#62;태그애서 muted속성 사용시 비디오가 자동재생됨. <br />
+                핸드폰이나 태블릿의 웹 브러우정서는 자동재생 할수없음.
+              </td>
+            </tr>
+            <tr>
+              <th>preload</th>
+              <td>
+                페이지를 불러올 때 파일을 어떻게 로딩할 것인지 지정. <br />
+                기본값 preliad="auto" <br />
+                사용값 종류 <br />
+                ㄴauto : 페이지가 로드될 때 브라우저가 전체 오디오 파일도 같이 로드. <br />
+                ㄴmetadata : 페이지가 로드될 때 브라우저가 메타데이터(metadata)만 로드. <br />
+                ㄴnone : 페이지가 로드될 때 브라우저가 오디오 파일을 로드 안함.  <br />
+              </td>
+            </tr>
+            <tr>
+              <th>width, height</th>
+              <td>너비, 높이 지정</td>
+            </tr>
+            <tr>
+              <th>poster="파일 이름"</th>
+              <td>&#60;video&#62; 태그의 속성으로 비디오가 재생되기 전까지 화면에 표시될 포스터 이미지를 지정</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>3. 웹 브라우저에서 지원하는 멀티미디어 파일의 종류</h3>
+        <p>
+          <img src="../images/img04-5_1.jpg" alt="멀티미디어 파일의 종류" width="497px" /> 
+          <img src="../images/img04-5_2.jpg" alt="웹 브라우저별 오디오, 비디오 파일 지원  여부" width="497px" />
+        </p>
+        <div class="test"></div>
+      </section>
+      <hr />
 
-    <section id="content4-7">
-      <h2></h2>
-      <div class="test"></div>
-    </section>
-    <hr />
-
-    <section id="content4-test">
-      <h2></h2>
-      <div class="test"></div>
-    </section>
+      <section id="content4-6">
+        <h2>04-6. 하이퍼링크 삽입하기</h2>
+        <p>
+          클릭하면 연결된 곳으로 연결되는 기능
+         <span class="code">
+          기본형 : &#60;a href="링크할 주소"&#62;링크를 걸 텍스트나 이미지&#60;/a&#62;
+         </span> <br />
+         링크가 걸린 텍스트나 이미지에 마우스를 가져가면 마우스 포인터가 손가락으로 바뀜
+        </p>
+        <p>
+          속성 <br />
+          ㄴ target="_blank" : 새로운 탭에서 링크열기
+        </p>
+        <div class="test">
+          <a href="https://github.com/K-POPPY">👾 나의 GitHub</a>
+        </div>
+      </section>
   </main>
 </body>
 
