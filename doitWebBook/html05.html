@@ -37,6 +37,10 @@
     .con5-4 .text {
       width: 300px;
     }
+
+    input#name:invalid {
+      border: 2px solid red;
+    }
   </style>
 </head>
 
@@ -50,6 +54,10 @@
           <li><a href="#content5-2">05-2. 사용자의 입력을 위한 input태그 👉</a></li>
           <li><a href="#content5-3">05-3. input 태그의 주요 속성 👉</a></li>
           <li><a href="#content5-4">05-4. 폼에서 사용하는 여러 가지 태그 👉</a></li>
+          <li>
+            <a href="#content5-5">05-5. web.dev 유효성 검사 규칙 정의 👉</a> <br />
+            <a href="https://web.dev/learn/forms/validation/" target="_blank">( ✈ wed.dev page )</a>
+          </li>
           <li>
             <a href="#quiz">05. 입력 양식 작성하기 QUIZ👉</a>
             <br /><br />
@@ -485,7 +493,7 @@
                   <select id="path">
                     <option value="blog" selected>블로그</option>
                     <option value="search">검색</option>
-                    <option value="sns" >SNS</option>
+                    <option value="sns">SNS</option>
                     <option value="etc">기타</option>
                   </select>
                 </li>
@@ -509,6 +517,56 @@
           </form>
         </div>
         <hr />
+
+        <section id="content5-5">
+          <h2>05-5. web.dev 유효성 검사 규칙 정의 | <a href="https://web.dev/learn/forms/validation/" taget="_blank">( ✈ wed.dev
+              page )</a></h2>
+          <h3>1.required 속성 : input 태그의 required 속성은 폼 데이터가 서버로 제출되기 전 반드시 채워져 있어야 하는 입력 필드 명시.</h3>
+          <span class="code">
+            &#60;lavel for="password"&#62;minlength로 최소 작성 글자 수 정의&#60;label&#62; <br />
+            &#60;input required minlength="8" type="password" id="password" name="password"&#62;
+          </span>
+          <form class="test">
+            <label for="password">패스워드 8자 미만으로 입력하면 양식 제출 안됨</label>
+            <input required minlength="8" type="password" id="password" name="password">
+            <button>Save</button>
+          </form>
+          <h3></h3>
+          <span class="code">
+            &#60;lavel for="animal"&#62;정규식 패턴 으로 규칙 정의&#60;label&#62; <br />
+            &#60;input required pattern="[a-z]{2,20}" type="text" id="animal" name="animal"&#62;
+          </span>
+          <form class="test">
+            <label for="animal">소문자만 입력 가능, 최소 2자 ~ 최대 20자까지 입력가능</label>
+            <input required pattern="[a-z]{2,20}" type="text" id="animal" name="animal">
+            <button>Save</button>
+          </form>
+          <h3>2. required 속성 선택자</h3>
+          <span class="code">
+            &#60;lavel for="name"&#62;required 속성 선택자&#60;label&#62; <br />
+            &#60;input required type="text" id="name" name="name"&#62; <br />
+            <br />
+            // CSS <br />
+            input#name:invalid {border: 2px solid red;} <br />
+            <br/>
+            // JavaScript <br />
+            // Constraint Validation API의 setCustomValidity() 메소드로 입력값 없이 제출했을때 고유한 오류메세지를 원하는 오류메세지로 변경 가능.<br />
+            const nameInput = document.querySelector('[name="name"]'); <br />
+            nameInput.addEventListener('invalid', () => { <br />
+              nameInput.setCustomValidity('이름을 입력해주세요.'); <br />
+            }); 
+          </span>
+          <form class="test">
+            <label for="name">required 속성 선택자</label>
+            <input required type="text" id="name" name="name">
+            <button>Save</button>
+          </form>
+          <label for="password">Password (required)</label>
+          <input required minlength="8" type="password" id="password" name="password" aria-describedby="password-minlength">
+          <span id="password-minlength">Enter at least eight characters</span>
+        </section>
+        <hr />
+
         <div id="quiz" class="quiz">
           <form>
             <h2>프런트엔드 개발자 지원서</h2>
@@ -517,9 +575,9 @@
             <fieldset>
               <legend><b>개인 정보</b></legend>
               <label for="userName">이름</label>
-              <input type="text" id="userName" placeholder="공백 없이 입력하세요." autofocus required >
+              <input type="text" id="userName" placeholder="공백 없이 입력하세요." autofocus required>
               <label for="usertel">연락처</label>
-              <input type="text" id="usertel" required >
+              <input type="text" id="usertel" required>
             </fieldset>
             <fieldset>
               <legend><b>지원 분야</b></legend>
@@ -541,6 +599,14 @@
       </section>
     </main>
   </div>
+
+  <script>
+    const nameInput = document.querySelector('[name="name"]');
+
+    nameInput.addEventListener('invalid', () => {
+      nameInput.setCustomValidity('이름을 입력해주세요.');
+    });
+  </script>
 </body>
 
 </html>
