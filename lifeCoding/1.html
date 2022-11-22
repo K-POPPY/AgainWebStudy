@@ -9,25 +9,27 @@
 </head>
 
 <body>
-    <h1><a href="index.html">생활코딩  WEB1 부록 : 코드의 힘</a></h1>
+    <h1><a href="index.html">생활코딩 WEB1 부록 : 코드의 힘</a></h1>
     <ol>
         <li><a href="index.html">[동영상 삽입] iframe</a></li>
         <li><a href="1.html">[댓글 기능 추가] DISQUS</a></li>
         <li><a href="2.html">[채팅 기능 추가] tawk.to</a></li>
+        <li><a href="3.html">[방문자 분석기] 구글 애널리틱스</a></li>
     </ol>
-    <h2>[댓글 기능 추가] DISQUS</h2>
+    <h2>2. [댓글 기능 추가] DISQUS</h2>
     <h3>이짜나언짜나 - 느슨해진 힙합씬에 긴장감을 줘</h3>
-    <p>
+    <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/q-2wrxTESKM" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-    </p>
-    <p>
+    </div>
+    <div>
+        <span>[MV] <strong>빵댕이 흔들어라</strong> (Twerk it) - <u>이짜나언짜나</u> EZUZ</span> <br />
         <a href="https://www.youtube.com/channel/UCCXRC4jNPgwjPoCml9jG2nw/" target="_blank" title="이짜나언짜아 유튜브">킹받으러
             가기~</a>
-    <p>[MV] <strong>빵댕이 흔들어라</strong> (Twerk it) - <u>이짜나언짜나</u> EZUZ</p>
-    </p>
+    </div>
+    <hr />
     <div id="disqus_thread"></div>
     <script>
         /**
@@ -39,6 +41,7 @@
         this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         */
+        // 댓글 기능
         (function () { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
             s.src = 'https://web1-nhzoxwh8q5.disqus.com/embed.js';
@@ -46,8 +49,9 @@
             (d.head || d.body).appendChild(s);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
+    <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
 </body>
 
 </html>
