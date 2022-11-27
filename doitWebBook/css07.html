@@ -125,6 +125,28 @@
           <p>font-family 속성으로 글꼴을 지정할 때 글꼴이 사용자 시스템에 없을 경우를 대비해 글꼴을 2~3개 지정. 웹 폰트를  사용하면 사용자 시스템에 없는 글꼴도 사용 가능.
           </p>
           <h3>웹 폰트 업로드 하고 사용하기</h3>
+          <p>
+            구글 웹 폰트처럼 인터넷 사이트에서 제공해 주는 경우 링크해서 사용하지만, 그렇지 않은 글꼴이거나 자신이 가지고 있는 TTF폰드를 웹폰드로 변환해야함. <br />
+            파일명.ttf: 컴퓨터에서 사용하는 글꼴. 트루타입(True Type). 크기가 커서 웹에서 사용하기 적절하지 않음. <br />
+            웹에 적합한 글꼴 파일: .eot, .wofff, woff2 <br />
+            <b><a href="https://transfonter.org/">📃 LINK: 영문, 한글 웹폰트 변환사이트</a></b>
+            <div class="code">
+              @font-face { <br />
+                font-family: 글꼴 이름; <br />
+                src: 글꼴 파일[글꼴 파일, 글꼴파일, ...]; <br />
+              } <br />
+              * 대부분의 모던 브라우저에서 지원하는 .ttf 포멧을 먼저 선언하고 .woff 포멧은 그 후에 선언 <br />
+              <br />
+              예제 <br />
+              @font-face {  <br />
+                font-family: 'Ostrich';  /* 폰트 이름 */ <br />
+                src: local('Ostrich Sans'),  <br />
+                      url('fonts/ostrich-sans-bold.woff') format('woff'),  <br />
+                      url('fonts/ostrich-sans-bold.ttf') format('truetype'),  <br />
+                      url('fonts/ostrich-sans-bold.svg') format('svg'); <br />
+              } 
+            </div>
+          </p>
     </main>
   </div>
 </body>
