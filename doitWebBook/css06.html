@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06. CSS의 기본</title>
+  <link rel="stylesheet" href="./commoon.css">
+  <style>
+    .con5-1:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    #content5-4 .test {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    #content5-4 textarea {
+      margin-left: 10px;
+    }
+    .con5-4:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .con5-4 .img {
+      width: 600px;
+    }
+    .con5-4 .text {
+      width: 300px;
+    }
+    input#name:invalid {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 id="content6">06. CSS 다루기</h1>
+      <nav>
+        <ul>
+          <li><a href="#content6-3">06-3. CSS 기본 선택자 알아보기 👉</a></li>
+          <li>
+            <a href="#content6-2">06-4. 캐스케이딩 스타일 시트 알아보기 👉</a>
+            <br /><br />
+          </li>
+          <li><a href="#content5">맨위로 ☝</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="content6-3">
+        <h2>06-3. CSS 기본 선택자 알아보기</h2>
+        <h3>1. 태그와 요소의 차이</h3>
+        <p>
+          태그: 말 그대로 태그 자체를 가리키는 말. <br />
+          요소: 태그를 적용한 것.
+        </p>
+        <div class="code">
+          &#60;p&#62;텍스트 단락 지정하기&#60;/p&#62;
+        </div>
+        <p>
+          위 소스에서 &#60;p&#62;,&#60;/p&#62;태그는 태그 자체를 말하는 것이고 &#60;p&#62;텍스트 단락 지정하기&#60;/p&#62; 전체부분을 &#60;p&#62;요소.
+          <br />
+          위 코드의 적용한 스타일은 <b>p 요소에 적용하는 스타일</b>
+        </p>
+        <h3>2. 선택자</h3>
+        <ul>
+          <li>전체 선택자: 문서의 모든 요소애 스타일 지정 | * {스타일 규칙}</li>
+          <li>타입 선택자: 특정 태그를 사용한 모든 요소에 스타일 적용. 타입 선택자는 태그 이름을 선택자로 사용하므로 태그 선택자, 요소 선택자라고도 함. W3C공식문서는 type selector.
+          </li>
+          <li>
+            id 선택자 : 같은 태그라도 일부는 다른 스타일을 사용하고 싶으면 태그에 id="아이디명"을 지정하면 id를 지정한 요소만 선택 가능. #아이디명 으로 선택자를 선택해 스타일 지정.
+            <br />
+            <b>id 선택자는 문서에서 한 번만 적용할수 있음.</b> <br />
+            id선택자는 중복해서 적용할수 없으므로 주로 문서의 레이아웃과 관련된 스타일, 웹 요소에 자바스크립트 프로그램을 사용하면서 요소를 구별할때 사용.
+          </li>
+          <li>
+            클래스 선택자 : id 선택자와 마찬가지로 웹문서의 특정 부분을 선택해 스타일을 지정. class="클래스명"을 태그에 적용 .클래스명 으로 선택해 스타일 지정. <br />
+            <b>class선택자는 문서에서 여러 번 적용 가능.</b>
+          </li>
+          <li>
+            그룹 선택자: 같은 스타일 규칙을 사용하고 싶을때 선택자를 쉼표(,)로 구분해 나열하고 스타일 규칙을 한 번만 정의함. | 선택자, 선택자 {스타일 규칙}
+          </li>
+        </ul>
+      </section>
+      <hr />
+
+      <section id="content6-4">
+        <h2>06-4. 캐스케이딩 스타일 시트 알아보기</h2>
+        <p>CSS: cascading style sheet </p>
+        <h3>1.캐스캐이딩의 의미</h3>
+        <p>
+          CSS는 우선순위가 위에서 아래, 계단식으로 적용. 우선 순위가 있는 스타일 시트. <br />
+          <b>CSS에서는 웹 요소에 둘 이상의 스타일을 적용할 때 우선순위에 따라 적용할 스타일 결정.</b> <br />
+          <br />
+          케스케이딩은 스타일끼리 충돌하지 않도록 막아 주는 중요한 개념.<br />
+          - 스타일 우선순위: 우선순위에 따라 위에서 아래로 스타일 적용 <br />
+          - 스타일 상속: 태그의 포함 관계에 따라 부모 요소의 스타일을 자식요소로, 위에서 아래로 전달
+        </p>
+        <h3>2. 스타일 우선순위</h3>
+        <p>
+          적용 범위에 따라 우선순위가 높은 순서 <br />
+          !important > 인라인 스타일 > id 스타일 > 클래스 스타일 > 타입 스타일
+        </p>
+        <h3>3. 스타일 상속</h3>
+        <p>
+          별도의 스타일을 지정하지 않으면 부모 > 자식 으로 스타일이 상속됨 <br />
+          <small>* 배경색과 배경이미지는 상속되지 않음</small> <br />
+          <u>나중에 작성한 스타일이 먼저 작성한 스타일을 덮어씀.</u>
+        </p>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

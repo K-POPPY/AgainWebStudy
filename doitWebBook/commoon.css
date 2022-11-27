@@ -1,3 +1,6 @@
+* {
+  text-decoration: none;
+}
 body {
   background-color: #333;
 }
@@ -6,9 +9,6 @@ body {
   margin: 0 auto;
   padding: 30px;
   background-color: #fffff0;
-}
-a {
-  text-decoration: none;
 }
 h1 {
   text-align: center;
