@@ -7,39 +7,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>07. 텍스틀를 표현하는 다양한 스타일</title>
   <link rel="stylesheet" href="./commoon.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
   <style>
-    .con5-1:after {
-      content: '';
-      display: block;
-      clear: both;
+    @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+    #content7-2 .test {
+      font-family: "dongle";
+      font-size: 35px;
     }
-
-    #content5-4 .test {
-      content: '';
-      display: block;
-      clear: both;
+    #content7-3 .test.color {
+      font-size: 50px;
+      font-weight: 900;
+      color: rgba(103, 201, 67, 0.5);
     }
-
-    #content5-4 textarea {
-      margin-left: 10px;
+    .row0 {text-align: start;}
+    .row1 {text-align: end;}
+    .row2 {text-align: left;}
+    .row3 {text-align: right;}
+    .row4 {text-align: center;}
+    .row5 {text-align: justify;}
+    #content7-3 .test.lineheight {
+      font-size: 12px;
+      line-height: 200%;
     }
-
-    .con5-4:after {
-      content: '';
-      display: block;
-      clear: both;
+    #content7-3 .testDeco0 {
+      text-decoration: underline;
     }
-
-    .con5-4 .img {
-      width: 600px;
+    #content7-3 .testDeco1 {
+      text-decoration: overline;
     }
-
-    .con5-4 .text {
-      width: 300px;
+    #content7-3 .testDeco2 {
+      text-decoration: line-through;
     }
-
-    input#name:invalid {
-      border: 2px solid red;
+    #content7-3 .test.shadow {
+      font-size: 30px;
+      font-weight: bold;
+      text-shadow: 5px 5px 1px #ffa500;
     }
   </style>
 </head>
@@ -52,9 +56,9 @@
         <ul>
           <li><a href="#content7-1">07-1. 글꼴 관련 스타일 👉</a></li>
           <li><a href="#content7-2">07-2. 웹 폰트 사용하기 👉</a></li>
-          <li><a href="#content7-4">07-4. 폼에서 사용하는 여러 가지 태그 👉</a></li>
+          <li><a href="#content7-3">07-3. 텍스트 관련 스타일👉</a></li>
           <li>
-            <a href="#content7-5">07-5. web.dev 유효성 검사 규칙 정의 👉</a> 
+            <a href="#content7-5">07-5. web.dev 유효성 검사 규칙 정의 👉</a>
             <br /><br />
           </li>
           <li><a href="#content7">맨위로 ☝</a></li>
@@ -64,89 +68,212 @@
     <main>
       <section id="content7-1">
         <h2>07-1. 글꼴 관련 스타일</h2>
-          <h3>1. 단위를 사용하여 글자 크기 지정하기(font-size)</h3>
-          <table>
-            <caption>CSS에서 사용하는 글자 크기 단위</caption>
-            <colgroup>
-              <col style="background-color:#f1adad;">
-              <col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th style="background-color:#f1adad; width:15%;">종류</th>
-                <th style="background-color:#f1adad; width:70%;">설명</th>
-                <th style="background-color:#f1adad; width:15%;">비고</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>em</th>
-                <td>부모 요소에서 지정한 글꼴의 대문자 M의 너비를 기준(1em)으로 한 후 비율값 지정.</td>
-                <td rowspan="2"><strong>1em: 16px</strong></td>
-              </tr>
-              <tr>
-                <th>rem</th>
-                <td>문서 시작 부분(root)에서 지정한 크기를 기준(1rem)으로 한 후 비율값을 지정.</td>
-              </tr>
-              <tr>
-                <th>ex</th>
-                <td>해당 글꼴의 소문자 x의 높일를 기준(1ex)으로 한 후 비율값을 지정.</td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>px</th>
-                <td>모니터의 1픽셀을 기준(1px)으로 한 후 비율값을 지정.</td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>pt</th>
-                <td>포인트라고 하며, 일반 문서에서 많이 사용.</td>
-                <td></td>
-              </tr>
-            </tbody>
+        <h3>1. 단위를 사용하여 글자 크기 지정하기(font-size)</h3>
+        <table>
+          <caption>CSS에서 사용하는 글자 크기 단위</caption>
+          <colgroup>
+            <col style="background-color:#f1adad;">
+            <col>
+          </colgroup>
+          <thead>
             <tr>
-              <th>%(백분율)</th>
-              <td>부모 요소의 글자크기를 기준으로 계산. 부모 요소의 글꼴크기가 font-size: 16px; 처럼 단위로 지정되어 있어야함.</td>
+              <th style="background-color:#f1adad; width:15%;">종류</th>
+              <th style="background-color:#f1adad; width:70%;">설명</th>
+              <th style="background-color:#f1adad; width:15%;">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>em</th>
+              <td>부모 요소에서 지정한 글꼴의 대문자 M의 너비를 기준(1em)으로 한 후 비율값 지정.</td>
+              <td rowspan="2"><strong>1em: 16px</strong></td>
+            </tr>
+            <tr>
+              <th>rem</th>
+              <td>문서 시작 부분(root)에서 지정한 크기를 기준(1rem)으로 한 후 비율값을 지정.</td>
+            </tr>
+            <tr>
+              <th>ex</th>
+              <td>해당 글꼴의 소문자 x의 높일를 기준(1ex)으로 한 후 비율값을 지정.</td>
               <td></td>
             </tr>
-          </table>
-          <h3>2. 글자 굵길를 지정하는 font-weight속성</h3>
-          <div class="code">기본형 font-weight:  ①normal | ②bold | ③bolder | ④lighter | ⑤100 ~ 900</div>
-          <p>
-            ①normal: 기본값, 400 <br />
-            ②bold: 굵게, 700 <br />
-            ③bolder: 원래보다 더 굵게 <br />
-            ④lighter: 원래보다 더 가늘게 <br />
-            ⑤100 ~ 900: 100~900사이의 굵기를 표현하며 100은 가장 가늘게 900은 가장 굵게
-          </p>
-          <hr>
+            <tr>
+              <th>px</th>
+              <td>모니터의 1픽셀을 기준(1px)으로 한 후 비율값을 지정.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>pt</th>
+              <td>포인트라고 하며, 일반 문서에서 많이 사용.</td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tr>
+            <th>%(백분율)</th>
+            <td>부모 요소의 글자크기를 기준으로 계산. 부모 요소의 글꼴크기가 font-size: 16px; 처럼 단위로 지정되어 있어야함.</td>
+            <td></td>
+          </tr>
+        </table>
+        <h3>2. 글자 굵길를 지정하는 font-weight속성</h3>
+        <div class="code">기본형 font-weight: ①normal | ②bold | ③bolder | ④lighter | ⑤100 ~ 900</div>
+        <p>
+          ①normal: 기본값, 400 <br />
+          ②bold: 굵게, 700 <br />
+          ③bolder: 원래보다 더 굵게 <br />
+          ④lighter: 원래보다 더 가늘게 <br />
+          ⑤100 ~ 900: 100~900사이의 굵기를 표현하며 100은 가장 가늘게 900은 가장 굵게
+        </p>
+      </section>
+      <hr />
 
-          <h2 id="content7-2">07-2. 웹 폰트 사용하기</h2>
-          <p>font-family 속성으로 글꼴을 지정할 때 글꼴이 사용자 시스템에 없을 경우를 대비해 글꼴을 2~3개 지정. 웹 폰트를  사용하면 사용자 시스템에 없는 글꼴도 사용 가능.
-          </p>
-          <h3>웹 폰트 업로드 하고 사용하기</h3>
-          <p>
-            구글 웹 폰트처럼 인터넷 사이트에서 제공해 주는 경우 링크해서 사용하지만, 그렇지 않은 글꼴이거나 자신이 가지고 있는 TTF폰드를 웹폰드로 변환해야함. <br />
-            파일명.ttf: 컴퓨터에서 사용하는 글꼴. 트루타입(True Type). 크기가 커서 웹에서 사용하기 적절하지 않음. <br />
-            웹에 적합한 글꼴 파일: .eot, .wofff, woff2 <br />
-            <b><a href="https://transfonter.org/">📃 LINK: 영문, 한글 웹폰트 변환사이트</a></b>
-            <div class="code">
-              @font-face { <br />
-                font-family: 글꼴 이름; <br />
-                src: 글꼴 파일[글꼴 파일, 글꼴파일, ...]; <br />
-              } <br />
-              * 대부분의 모던 브라우저에서 지원하는 .ttf 포멧을 먼저 선언하고 .woff 포멧은 그 후에 선언 <br />
-              <br />
-              예제 <br />
-              @font-face {  <br />
-                font-family: 'Ostrich';  /* 폰트 이름 */ <br />
-                src: local('Ostrich Sans'),  <br />
-                      url('fonts/ostrich-sans-bold.woff') format('woff'),  <br />
-                      url('fonts/ostrich-sans-bold.ttf') format('truetype'),  <br />
-                      url('fonts/ostrich-sans-bold.svg') format('svg'); <br />
-              } 
-            </div>
-          </p>
+      <section id="content7-2">
+        <h2>07-2. 웹 폰트 사용하기</h2>
+        <p>font-family 속성으로 글꼴을 지정할 때 글꼴이 사용자 시스템에 없을 경우를 대비해 글꼴을 2~3개 지정. 웹 폰트를 사용하면 사용자 시스템에 없는 글꼴도 사용 가능.
+        </p>
+        <h3>웹 폰트 업로드 하고 사용하기</h3>
+        <p>
+          구글 웹 폰트처럼 인터넷 사이트에서 제공해 주는 경우 링크해서 사용하지만, 그렇지 않은 글꼴이거나 자신이 가지고 있는 TTF폰드를 웹폰드로 변환해야함. <br />
+          파일명.ttf: 컴퓨터에서 사용하는 글꼴. 트루타입(True Type). 크기가 커서 웹에서 사용하기 적절하지 않음. <br />
+          웹에 적합한 글꼴 파일: .eot, .wofff, woff2 <br />
+          <b><a href="https://transfonter.org/">📃 LINK: 영문, 한글 웹폰트 변환사이트</a></b>
+        </p>
+        <div class="code">
+          @font-face { <br />
+          &nbsp;&nbsp;&nbsp;font-family: 글꼴 이름; <br />
+          &nbsp;&nbsp;&nbsp;src: 글꼴 파일[글꼴 파일, 글꼴파일, ...]; <br />
+          } <br />
+          * 대부분의 모던 브라우저에서 지원하는 .ttf 포멧을 먼저 선언하고 .woff 포멧은 그 후에 선언 <br />
+          <br />
+          예제 <br />
+          @font-face { <br />
+          &nbsp;&nbsp;&nbsp;font-family: 'Ostrich'; /* 폰트 이름 */ <br />
+          &nbsp;&nbsp;&nbsp;src: local('Ostrich Sans'), <br />
+          &nbsp;&nbsp;&nbsp;url('fonts/ostrich-sans-bold.woff') format('woff'), <br />
+          &nbsp;&nbsp;&nbsp;url('fonts/ostrich-sans-bold.ttf') format('truetype'), <br />
+          &nbsp;&nbsp;&nbsp;url('fonts/ostrich-sans-bold.svg') format('svg'); <br />
+          }
+        </div>
+        <div class="test">
+          <h4>구글 폰트 사용하기</h4>
+          안녕 나는 구글폰트 동글글씨체야! <br />
+          밑의 빨강박스 안의 코드를 적용해서 보이는중!
+          <img src="../images/img07_1.jpg" alt="구글폰드">
+        </div>
+      </section>
+      <hr />
+
+      <section id="content7-3">
+        <h2>07-3. 텍스트 관련 스타일</h2>
+        <h3>1. 글자색, color</h3>
+        <p>
+          ① 16진수: #기호 다음에 6자리의 16진수로 표시. <br />
+          앞에서부터 두 자리씩 묶어 #RRGGBB 로 표시. <br />
+          RR자리는 빨강생, GG자리는 초록색, BB자리는 파란색 의 양을 표시. <br />
+          00은 각 색상마다 하나도 섞이지 않음, ff는 00부터 해당색이 가득 섞였음은 표시. <br />
+          #000000(검은색)부터 #ffffff(흰색)까지 표현 가능. <br />
+          #000ff -> #00f: 두 자리씩 중복될 경우 줄여서 표기 가능. <br />
+          <br />
+          ② rgb, rgba: red, green, blue, alpha(불투명도) <br />
+          0 (하나도 섞이지 않았을 때 ) ~ 255 (가득 섞였을 때) 사이의 값.
+          <br />
+          ③ hsl, hsla: hue(색상), saturation(채도), lightness(명도), alpha(불투명도). ㄷ<br />
+          <br />
+          ④ red, yellow, black등 영문명으로 작성.
+        </p>
+        <div class="test color">
+          color: rgba(103,201,67,0.5);
+        </div>
+        <h3>2. 텍스트 정렬, text-align</h3>
+        <p>
+          문단의 텍스트 정렬 방법 지정.
+        </p>
+        <table>
+          <caption>text-align의 속성값</caption>
+          <colgroup>
+            <col style="width: 200px; background-color:#f1adad;">
+            <col style="width: 740px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>종류</th>
+              <th style="background-color: #f1adad">설명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>start</th>
+              <td class="row0">현재 텍스트 줄의 시작 위치에 맞추어 문단을 정렬.</td>
+            </tr>
+            <tr>
+              <th>end</th>
+              <td class="row1">현재 텍스트 줄의 끝 위치에 맞추어 문단을 정렬.</td>
+            </tr>
+            <tr>
+              <th>left</th>
+              <td class="row2">왼쪽에 맞추어 문단을 정렬.</td>
+            </tr>
+            <tr>
+              <th>right</th>
+              <td class="row3">오른쪽에 맞추어 문단을 정렬.</td>
+            </tr>
+            <tr>
+              <th>center</th>
+              <td class="row4">가운데에 맞추어 문단을 정렬.</td>
+            </tr>
+            <tr>
+              <th>justify</th>
+              <td class="row5">양쪽에 맞추어 문단을 정렬.</td>
+            </tr>
+            <tr>
+              <th>match-parent</th>
+              <td class="row6">부모 요소를 따라 문단을 정렬.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>3. 줄 간격 조절, line-height</h3>
+        <p>
+          줄 간격은 정확한 단위로 크깃값 지정 <br />
+          문단의 글자 크기를 기준으로 몇 배수인지 백분율로 지정 <br />
+          ㄴ 글자 크기가 12px인 문단의 줄 간격을 2.0으로 했다면 실제 줄 간격은 글자 크기의 2.0배인 24px이 되며 백분율도 같은 식을로 계산 <br/>
+          보통 줄간격은 글자 크기의 1.5~2배면 적당. <br />
+          * 문단이 한줄일때 line-height의 속성값을 height속성값과 똑같이 설정하면 세로로 가운데 정렬됨.
+        </p> 
+        <div class="test lineheight">
+          줄간격이 24px인 경우. <br /> 
+          p {font-size: 12px; line-height: 24px;} <br />
+          p {font-size: 12px; line-heigh: 2.0;} <br />
+          p {font-size: 12px; line-heighL 200%;}
+        </div>
+        <h3>4. 텍스트 데코, text-decoration</h3>
+        <div class="code">
+          // 텍스트에 줄을 표시하지 않음 <br />
+          text-decoraation: none; <br />
+          <br />
+          <span class="testDeco0">
+            // 밑줄 표시 <br />
+            text-decoration: underline; <br />
+          </span> <br />
+          <br />
+          <span class="testDeco1">
+            // 윗줄 표시 <br />
+            text-decoration: overline; <br />
+          </span> <br />
+          <br />
+          <span class="testDeco2">
+            // 취소선 표시 <br />
+            text-decoration: line-through;
+          </span>
+        </div>
+        <h3>5. 그림자 효과, text-shadow</h3>
+        <div class="code">
+          text-shadow: none | 가로거리(필수값) 세로거리(필수값) 번짐정도 색상;
+        </div>
+        <div class="test shadow">
+          text-shadow: 3px 2px 1px #ffa500;
+        </div>
+        <h3>6. 대소문자변환, text-transform</h3>
+      </section>
+
     </main>
   </div>
 </body>
