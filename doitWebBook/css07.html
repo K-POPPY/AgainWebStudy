@@ -17,7 +17,7 @@
       font-size: 35px;
     }
     #content7-3 .test.color {
-      font-size: 50px;
+      font-size: 2.5rem;
       font-weight: 900;
       color: rgba(103, 201, 67, 0.5);
     }
@@ -45,29 +45,78 @@
       font-weight: bold;
       text-shadow: 5px 5px 1px #ffa500;
     }
+    #content7-4 .bullet ul, #content7-4 .bullet ol {
+      margin: 10px 0 10px 20px;
+      float: left;
+      width: 22%;
+    }
+    #content7-4 .bullet:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div id="container">
     <header>
-      <h1 id="content7">07. 텍스틀를 표현하는 다양한 스타일</h1>
-      <nav>
+      <h1>Do it! 웹표준의 정석</h1>
+      <nav class="navGnb">
         <ul>
+          <li>
+            HTML
+            <ul>
+              <li><a href="./html03.html">03. HTML 기본문서 만들기</a></li>
+              <li><a href="./html04.html">04. 웹문서에 다양한 내용 입력하기</a></li>
+              <li><a href="./html05.html">05. 입력 양식 작성하기</a></li>
+            </ul>
+          </li>
+          <li>
+            CSS
+            <ul>
+              <li><a href="./css06.html">06. CSS 다루기</a></li>
+              <li><a href="./css07.html">07. 텍스틀를 표현하는 다양한 스타일</a></li>
+              <li><a href="./css08.html">08. 레이아웃을 구성하는 CSS 박스 모델</a></li>
+              <li><a href="./css09.html">09. 이미지와 그라데이션 효과로 배경 꾸미기</a></li>
+              <li><a href="./css10.html">10. CSS 고급 선택자</a></li>
+              <li><a href="./css11.html">11. 트렌지션과 애니메이션</a></li>
+              <li><a href="./css12.html">12. 반응형 웹과 미디어 쿼리</a></li>
+            </ul>
+          </li>
+          <li>
+            JAVASCRIPT
+            <ul>
+              <li><a href="./js13.html">13. 자바스크립트와 첫 만남</a></li>
+              <li><a href="./js14.html">14. 자바스크립트 기본 문법</a></li>
+              <li><a href="./js15.html">15. 함수와 이벤트</a></li>
+              <li><a href="./js16.html">16. 자바스크립트와 객체</a></li>
+              <li><a href="./js17.html">17. 문서 객체 모델(DOM) </a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      
+      <h2 id="content7">07. 텍스틀를 표현하는 다양한 스타일</h2>
+    </header>
+    <main>
+      <nav class="navLnb">
+        <ul>
+          <li><a href="#content7">07. 텍스틀를 표현하는 다양한 스타일 👉</a></li>
           <li><a href="#content7-1">07-1. 글꼴 관련 스타일 👉</a></li>
           <li><a href="#content7-2">07-2. 웹 폰트 사용하기 👉</a></li>
           <li><a href="#content7-3">07-3. 텍스트 관련 스타일👉</a></li>
+          <li><a href="#content7-4">07-4. 목록 스타일 👉</a></li>
           <li>
             <a href="#content7-5">07-5. web.dev 유효성 검사 규칙 정의 👉</a>
             <br /><br />
           </li>
-          <li><a href="#content7">맨위로 ☝</a></li>
+          <li><a href="#container">맨위로 ☝</a></li>
         </ul>
       </nav>
-    </header>
-    <main>
       <section id="content7-1">
         <h2>07-1. 글꼴 관련 스타일</h2>
+
         <h3>1. 단위를 사용하여 글자 크기 지정하기(font-size)</h3>
         <table>
           <caption>CSS에서 사용하는 글자 크기 단위</caption>
@@ -114,6 +163,7 @@
             <td></td>
           </tr>
         </table>
+
         <h3>2. 글자 굵길를 지정하는 font-weight속성</h3>
         <div class="code">기본형 font-weight: ①normal | ②bold | ③bolder | ④lighter | ⑤100 ~ 900</div>
         <p>
@@ -130,6 +180,7 @@
         <h2>07-2. 웹 폰트 사용하기</h2>
         <p>font-family 속성으로 글꼴을 지정할 때 글꼴이 사용자 시스템에 없을 경우를 대비해 글꼴을 2~3개 지정. 웹 폰트를 사용하면 사용자 시스템에 없는 글꼴도 사용 가능.
         </p>
+
         <h3>웹 폰트 업로드 하고 사용하기</h3>
         <p>
           구글 웹 폰트처럼 인터넷 사이트에서 제공해 주는 경우 링크해서 사용하지만, 그렇지 않은 글꼴이거나 자신이 가지고 있는 TTF폰드를 웹폰드로 변환해야함. <br />
@@ -137,6 +188,7 @@
           웹에 적합한 글꼴 파일: .eot, .wofff, woff2 <br />
           <b><a href="https://transfonter.org/">📃 LINK: 영문, 한글 웹폰트 변환사이트</a></b>
         </p>
+
         <div class="code">
           @font-face { <br />
           &nbsp;&nbsp;&nbsp;font-family: 글꼴 이름; <br />
@@ -153,17 +205,19 @@
           &nbsp;&nbsp;&nbsp;url('fonts/ostrich-sans-bold.svg') format('svg'); <br />
           }
         </div>
+  
         <div class="test">
           <h4>구글 폰트 사용하기</h4>
           안녕 나는 구글폰트 동글글씨체야! <br />
           밑의 빨강박스 안의 코드를 적용해서 보이는중!
-          <img src="../images/img07_1.jpg" alt="구글폰드">
+          <img width="100%;" src="../images/img07_1.jpg" alt="구글폰드">
         </div>
       </section>
       <hr />
 
       <section id="content7-3">
         <h2>07-3. 텍스트 관련 스타일</h2>
+
         <h3>1. 글자색, color</h3>
         <p>
           ① 16진수: #기호 다음에 6자리의 16진수로 표시. <br />
@@ -180,13 +234,13 @@
           <br />
           ④ red, yellow, black등 영문명으로 작성.
         </p>
+
         <div class="test color">
           color: rgba(103,201,67,0.5);
         </div>
+        
         <h3>2. 텍스트 정렬, text-align</h3>
-        <p>
-          문단의 텍스트 정렬 방법 지정.
-        </p>
+        <p>문단의 텍스트 정렬 방법 지정.</p>
         <table>
           <caption>text-align의 속성값</caption>
           <colgroup>
@@ -230,6 +284,7 @@
             </tr>
           </tbody>
         </table>
+
         <h3>3. 줄 간격 조절, line-height</h3>
         <p>
           줄 간격은 정확한 단위로 크깃값 지정 <br />
@@ -238,14 +293,17 @@
           보통 줄간격은 글자 크기의 1.5~2배면 적당. <br />
           * 문단이 한줄일때 line-height의 속성값을 height속성값과 똑같이 설정하면 세로로 가운데 정렬됨.
         </p> 
+
         <div class="test lineheight">
           줄간격이 24px인 경우. <br /> 
           p {font-size: 12px; line-height: 24px;} <br />
           p {font-size: 12px; line-heigh: 2.0;} <br />
           p {font-size: 12px; line-heighL 200%;}
         </div>
+
         <h3>4. 텍스트 데코, text-decoration</h3>
-        <div class="code">
+
+        <div class="test">
           // 텍스트에 줄을 표시하지 않음 <br />
           text-decoraation: none; <br />
           <br />
@@ -264,14 +322,183 @@
             text-decoration: line-through;
           </span>
         </div>
+
         <h3>5. 그림자 효과, text-shadow</h3>
+
         <div class="code">
           text-shadow: none | 가로거리(필수값) 세로거리(필수값) 번짐정도 색상;
         </div>
+
         <div class="test shadow">
           text-shadow: 3px 2px 1px #ffa500;
         </div>
+
         <h3>6. 대소문자변환, text-transform</h3>
+        <table>
+          <caption>text-transform 속성값</caption>
+          <colgroup>
+            <col width="150px;" style="background-color:#f1adad;">
+            <col width="390px;">
+            <col width="390px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>종류</th>
+              <th style="background-color:#f1adad;">설명</th>
+              <th style="background-color:#f1adad;">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="text-transform: none;">
+              <th>none</th>
+              <td>
+                줄을 표시하지 않음. <br />
+                Hollo, World!
+              </td>
+              <td></td>
+            </tr>
+            <tr style="text-transform: capitalize;">
+              <th>capitalize</th>
+              <td>
+                첫 번째 글자를 대문자로 변환. <br />
+                Hollo, World!
+              </td>
+              <td></td>
+            </tr>
+            <tr style="text-transform: uppercase;">
+              <th>uppercase</th>
+              <td>
+                모든 글자를 대문자로 변환. <br />
+                Hollo, World!
+              </td>
+              <td></td>
+            </tr>
+            <tr style="text-transform: lowercase;">
+              <th>lowercase</th>
+              <td>
+                모든 글자를 소문자로 변환. <br />
+                Hollo, World!
+              </td>
+              <td></td>
+            </tr>
+            <tr style="text-transform: full-width;">
+              <th>full-width</th>
+              <td>
+                가능한 한 모든 문자를 전각 문자로 변환.<br />
+                Hollo, World!
+              </td>
+              <td>
+                '전각문자': 가로와 세로의 길이 비율이 같은 글자. <br />
+                '반각문자': 가로와 세로의 길이 비율이 1:2인 글자.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>7. 글자간격 조걸, letter-spacing  / word-spacing</h3>
+        <p>
+          letter-spancing: 글자와 글자 사이 간격 조절.(자간) <br />
+          word-spacing: 단어와 단어 사이 간격 조절. <br />
+          px, em, 로 크깃값 조절.
+        </p>
+
+        <div class="test">
+          <span>너는 정말 특별해 전혀 독하지 않은데 | 기본값</span> <br />
+          <br />
+          <span style="letter-spacing:0.2em">너는 정말 특별해 전혀 독하지 않은데 | letter-spacing:0.2em </span> <br />
+          <br />
+          <span style="letter-spacing:0.5em;">너는 정말 특별해 전혀 독하지 않은데 | letter-spacing:0.5em </span> <br />
+          <br />
+          <span style="word-spacing: -10px;">너는 정말 특별해 전혀 독하지 않은데 | word-spacing: -10px;</span> <br />
+          <br />
+          <span style="word-spacing: 10px;">너는 정말 특별해 전혀 독하지 않은데 | word-spacing: 10px;</span> <br />
+        </div>
+      </section>
+
+      <section id="content7-4">
+        <h2>07-4. 목록 스타일</h2>
+
+        <h3>1. 블릿 모양과 번호 스타일, list-style-type</h3>
+        <div class="bullet">
+          <ul style="list-style-type: disc;">
+            <li>disc</li>
+            <li>채운 원 모양</li>
+            <li></li>
+          </ul>
+          <ul style="list-style-type: circle;">
+            <li>circle</li>
+            <li>빈 원 모양</li>
+            <li></li>
+          </ul>
+          <ul style="list-style-type: square;">
+            <li>square</li>
+            <li>채운 사각형 모양</li>
+            <li></li>
+          </ul>
+          <ol style="list-style-type: decimal;">
+            <li>decimal</li>
+            <li>1부터 시작하는 10진수</li>
+            <li></li>
+          </ol>
+          <ol style="list-style-type: decimal-leading-zero;">
+            <li>decimal-leading-zero</li>
+            <li>앞에 0이 붙는 10진수</li>
+            <li></li>
+          </ol>
+          <ol style="list-style-type: lower-roman;">
+            <li>lower-roman</li>
+            <li>로마 숫자 소문자</li>
+            <li></li>
+          </ol>
+          <ol style="list-style-type: upper-roman;">
+            <li>upper-roman</li>
+            <li>로마 숫자 대문자</li>
+            <li></li>
+          </ol>
+          <ol style="list-style-type: lower-alpha;">
+            <li>lower-alpha | lower-latin</li>
+            <li>알파벳 소문자</li>
+            <li></li>
+          </ol>
+          <ol style="list-style-type: upper-alpha;">
+            <li>upper-alpha | upper-latin</li>
+            <li>알파벳 대문자</li>
+            <li></li>
+          </ol>
+          <ol style="list-style-type: none;">
+            <li>none</li>
+            <li>블릿이나 숫자가 없음</li>
+            <li></li>
+          </ol>
+        </div>
+
+        <h3>2. 블릿 대신 원하는 이미지, list-style-image</h3>
+        <ul style="list-style-image: url(../images/img07_2.png);">
+          <li style="background-color: #eee;">list-style-image: url(../images/img07_2.png);</li>
+          <li>블릿에 들어갈 원하는 이미지는 블릿 크기만큼 작아야함.</li>
+          <li>속성값 none, 블릿 숫자 없음.</li>
+        </ul>
+
+        <h3>3. 목록 들여 쓰기, list-style-position</h3>
+        <ol style="list-style-position: outside;">
+          <li>outside</li>
+          <li>기본값</li>
+          <li></li>
+        </ol>
+        <ol style="list-style-position: inside;">
+          <li>inside</li>
+          <li>들여쓰기</li>
+          <li></li>
+        </ol>
+
+        <h3>4. 목록스타일 속성 축약형</h3>
+        <div class="code">
+          // 블릿 없애기 <br />
+          ul {list-style-type: none;} --> ul {list-style: none;} <br />
+          <br />
+          // 소문자 목록 만듣고 들여쓰기 <br />
+          ol {list-style-type: lower-alpha; list-style-position: inside;}  --> ol {list-sytle: lower-alpha inside;}
+        </div>
       </section>
 
     </main>

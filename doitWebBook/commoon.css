@@ -4,26 +4,56 @@
 body {
   background-color: #333;
 }
-.container {
+ul, ol {margin: 0; padding: 0;}
+#container {
   max-width : 940px;
   margin: 0 auto;
   padding: 30px;
   background-color: #fffff0;
 }
-h1 {
+h1, h2 {
   text-align: center;
 }
 span {
   display: inline-block;
 }
-nav {
+nav.navGnb {
+  display: block;
+  width: 900px;
+  margin: 0 auto;
+}
+nav.navGnb ul {
+  padding-bottom: 20px;
+  height: 200px;
+}
+nav.navGnb>ul>li {
+  width: 30%;
+  float: left;
+}
+nav.navGnb ul li {
+  height: 25px;
+  list-style: none outside;
+  text-align: center;
+}
+nav.navGnb:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+nav.navGnb a {
+  display: inline-block;
+  padding: 15px 0;
+}
+nav.navLnb {
   position: fixed;
+  padding: 13px 0 13px 30px;
   top: 10px;
   right: 5px;
   width: 360px;
   border: solid 1px #000000;
   background-color: #faebd7;
 }
+/* nav.navLnb ul {list-style-position:inside;} */
 table {
   margin: 20px 0; 
 }
@@ -36,11 +66,11 @@ tr, th, td {
 }
 .img {
   float: left;
-  width: 450px;
+  width: 30%;
 }
 .text {
   float: left;
-  width: 450px;
+  width: 65%;
   margin-left: 30px;
 }
 .code {
