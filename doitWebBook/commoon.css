@@ -17,32 +17,40 @@ h1, h2 {
 span {
   display: inline-block;
 }
-nav.navGnb {
+.navGnb {
   display: block;
-  width: 900px;
+  width: 940px;
   margin: 0 auto;
-}
-nav.navGnb ul {
-  padding-bottom: 20px;
-  height: 200px;
-}
-nav.navGnb>ul>li {
-  width: 30%;
-  float: left;
-}
-nav.navGnb ul li {
-  height: 25px;
-  list-style: none outside;
   text-align: center;
 }
-nav.navGnb:after {
+.navGnb ul {
+  list-style: none;
+}
+.navGnb>ul {
+  width: 940px;
+  height: 350px;
+  margin: 0 auto;
+}
+.gnb1dep {
+  height: 40px;
+  width: 310px;
+  float: left;
+  line-height: 40px;
+  font-size: 25px;
+}
+.navGnb>ul:after {
   content: '';
   display: block;
   clear: both;
 }
-nav.navGnb a {
+.gnb2dep {
+  padding: 5px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 18px;
+}
+.navGnb a {
   display: inline-block;
-  padding: 15px 0;
 }
 nav.navLnb {
   position: fixed;
