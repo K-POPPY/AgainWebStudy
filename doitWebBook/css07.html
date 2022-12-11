@@ -19,7 +19,7 @@
     #content7-3 .test.color {
       font-size: 2.5rem;
       font-weight: 900;
-      color: rgba(103, 201, 67, 0.5);
+      color: rgba(127, 67, 201, 0.5);
     }
     .row0 {text-align: start;}
     .row1 {text-align: end;}
@@ -55,15 +55,22 @@
       display: block;
       clear: both;
     }
+    #content7-5 table {
+      border-collapse: separate;
+      border: 5px solid #F2EFC4;
+      padding: 8px;
+      caption-side: bottom;
+    }
+    #content7-5 th, #content7-5 td {
+      border: 2px dotted #000;
+      padding: 15px;
+    }
   </style>
 </head>
 
 <body>
   <div id="container">
     <header>
-      <p>
-        <strong>중요한 것은 꺾이지 않는 마음</strong>
-      </p>
       <h1>Do it! 웹표준의 정석</h1>
       <nav class="navGnb">
         <ul>
@@ -111,7 +118,7 @@
           <li><a href="#content7-3">07-3. 텍스트 관련 스타일👉</a></li>
           <li><a href="#content7-4">07-4. 목록 스타일 👉</a></li>
           <li>
-            <a href="#content7-5">07-5. web.dev 유효성 검사 규칙 정의 👉</a>
+            <a href="#content7-5">07-5. 표 스타일 👉</a>
             <br /><br />
           </li>
           <li><a href="#container">맨위로 ☝</a></li>
@@ -124,14 +131,14 @@
         <table>
           <caption>CSS에서 사용하는 글자 크기 단위</caption>
           <colgroup>
-            <col style="background-color:#f1adad;">
+            <col style="background-color:#A66D58;">
             <col>
           </colgroup>
           <thead>
             <tr>
-              <th style="background-color:#f1adad; width:15%;">종류</th>
-              <th style="background-color:#f1adad; width:70%;">설명</th>
-              <th style="background-color:#f1adad; width:15%;">비고</th>
+              <th style="background-color:#A66D58; width:15%;">종류</th>
+              <th style="background-color:#A66D58; width:70%;">설명</th>
+              <th style="background-color:#A66D58; width:15%;">비고</th>
             </tr>
           </thead>
           <tbody>
@@ -233,13 +240,14 @@
           ② rgb, rgba: red, green, blue, alpha(불투명도) <br />
           0 (하나도 섞이지 않았을 때 ) ~ 255 (가득 섞였을 때) 사이의 값.
           <br />
-          ③ hsl, hsla: hue(색상), saturation(채도), lightness(명도), alpha(불투명도). ㄷ<br />
+          <br />
+          ③ hsl, hsla: hue(색상), saturation(채도), lightness(명도), alpha(불투명도). <br />
           <br />
           ④ red, yellow, black등 영문명으로 작성.
         </p>
 
         <div class="test color">
-          color: rgba(103,201,67,0.5);
+          color: rgba(127, 67, 201, 0.5);
         </div>
         
         <h3>2. 텍스트 정렬, text-align</h3>
@@ -247,13 +255,13 @@
         <table>
           <caption>text-align의 속성값</caption>
           <colgroup>
-            <col style="width: 200px; background-color:#f1adad;">
+            <col style="width: 200px; background-color:#A66D58;">
             <col style="width: 740px;">
           </colgroup>
           <thead>
             <tr>
               <th>종류</th>
-              <th style="background-color: #f1adad">설명</th>
+              <th style="background-color: #A66D58">설명</th>
             </tr>
           </thead>
           <tbody>
@@ -340,15 +348,15 @@
         <table>
           <caption>text-transform 속성값</caption>
           <colgroup>
-            <col width="150px;" style="background-color:#f1adad;">
+            <col width="150px;" style="background-color:#A66D58;">
             <col width="390px;">
             <col width="390px;">
           </colgroup>
           <thead>
             <tr>
               <th>종류</th>
-              <th style="background-color:#f1adad;">설명</th>
-              <th style="background-color:#f1adad;">비고</th>
+              <th style="background-color:#A66D58;">설명</th>
+              <th style="background-color:#A66D58;">비고</th>
             </tr>
           </thead>
           <tbody>
@@ -417,6 +425,7 @@
           <span style="word-spacing: 10px;">너는 정말 특별해 전혀 독하지 않은데 | word-spacing: 10px;</span> <br />
         </div>
       </section>
+      <hr />
 
       <section id="content7-4">
         <h2>07-4. 목록 스타일</h2>
@@ -477,7 +486,7 @@
 
         <h3>2. 블릿 대신 원하는 이미지, list-style-image</h3>
         <ul style="list-style-image: url(../images/img07_2.png);">
-          <li style="background-color: #eee;">list-style-image: url(../images/img07_2.png);</li>
+          <li style="background-color: #A6A198; color: #F2F2F2;">list-style-image: url(../images/img07_2.png);</li>
           <li>블릿에 들어갈 원하는 이미지는 블릿 크기만큼 작아야함.</li>
           <li>속성값 none, 블릿 숫자 없음.</li>
         </ul>
@@ -503,7 +512,70 @@
           ol {list-style-type: lower-alpha; list-style-position: inside;}  --> ol {list-sytle: lower-alpha inside;}
         </div>
       </section>
+      <hr />
 
+      <section id="content7-5">
+        <h2>07-5. 표 스타일</h2>
+
+        <h3>1. 표 제목의 위치를 정해 주는 caption-side 속성</h3>
+        <p>
+          표 제목은 &#60;caption&#62;태그를 이용해 캡션으로 표시. <br />
+          캡션 위치의 기본값은 표 위 지만 caption-side속성을 이용해 아래로 이동가능.
+        </p>
+        <div class="code">
+          caption-side: top(위, 기본값) | bottom(아래)
+        </div>
+        
+        <h3>2. 표와 셀 테두리는 합쳐주는 border-collapse</h3>
+        <p>
+          표(table)와 셀(td, th)에 각각 border가 있는게 table의 기본값. <br/>
+          이로인해 셀과 셀사이 셀과 표사이에 여백이 생기며 두 줄로 표시 됨. <br />
+          두 줄 그댈로 둘건지 합쳐서 하나로 표시할 것인지 boder-collapse속성으로 &#60;table&#62; 태그에 적용.
+        </p>
+        <div class="code">
+          boder-collapse: collapse(표와 셀의 테두리를 합쳐 하나로 표시) | separte(표와 셀의 테두리를 따로 표시, 기본값)
+        </div>
+
+        <div class="test">
+          <table>
+            <caption>선물용과 가정용 상품 구성</caption>
+            <colgrounp>
+              <col style="background: #A66D58;">
+              <col>
+              <col>
+              <col>
+            </colgrounp>
+            <tr>
+              <th>용도</th>
+              <th style="background: #A66D58;">중량</th>
+              <th style="background: #A66D58;">개수</th>
+              <th style="background: #A66D58;">가격</th>
+            </tr>
+            <tr>
+              <th rowspan="2">선물용</th>
+              <td>3kg</td>
+              <td>11~~16과</td>
+              <td>35,000원</td>
+            </tr>
+            <tr>
+              <td>5kg</td>
+              <td>18~26과</td>
+              <td>52,000원</td>
+            </tr>
+            <tr>
+              <th rowspan="2">가정용</th>
+              <td>3kg</td>
+              <td>11~16과</td>
+              <td>30,000원</td>
+            </tr>
+            <tr>
+              <td>5kg</td>
+              <td>18~26과</td>
+              <td>47,000원</td>
+            </tr>
+          </table>
+        </div>
+      </section>
     </main>
   </div>
 </body>

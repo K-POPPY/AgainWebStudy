@@ -15,6 +15,12 @@
     }
     .img {width: 50%;}
     .text {width: 45%;}
+    main ol, ul {
+      margin-bottom: 10px;
+    }
+    main li {
+      margin-bottom: 5px;
+    }
   </style>
 </head>
 
@@ -321,8 +327,8 @@
         <h2>04-3. 표 만들기</h2>
         <h3>1. 표 만들기</h3>
         <div class="con4-3">
-          <img class="img" width="50%" src="../images/img04-3_0.jpg" alt="표의 형태와 구성 요소">
-          <div class="text" width="45%">
+          <img class="img" src="../images/img04-3_0.jpg" alt="표의 형태와 구성 요소">
+          <div class="text">
             표<sup>table</sup>는 행<sup>row</sup>과 열<sup>column</sup>그리고 셀<sup>cell</sup>로 이루어짐
           </div>
         </div>
@@ -364,13 +370,20 @@
           <h4>상품구성</h4>
           <table>
             <caption>선물용과 가정용 상품 구성</caption>
+            <colgroup>
+              <col style="background: #A66D58;">
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
             <thead>
               <tr>
                 <th>용도</th>
-                <th>중량</th>
-                <th>갯수</th>
-                <th>가격</th>
-                <th>현재 표 구조화 된 내용</th>
+                <th style="background: #A66D58;">중량</th>
+                <th style="background: #A66D58;">갯수</th>
+                <th style="background: #A66D58;">가격</th>
+                <th style="background: #A66D58;">현재 표 구조화 된 내용</th>
               </tr>
             </thead>
             <tbody>
@@ -424,18 +437,18 @@
           <table>
             <caption>먹거리 <br /><br /></caption>
             <colgroup>
-              <col style="background-color:#f1adad;">
-              <col span="4" style="background-color:#eee;">
-              <col style="width:400px; background-color:#eee;">
+              <col style="background-color:#A66D58;">
+              <col span="4">
+              <col style="width:400px;">
             </colgroup>
             <thead>
               <tr>
                 <th>No.</th>
-                <th style="background-color:#f1adad;">음식</th>
-                <th style="background-color:#f1adad;">판매시간</th>
-                <th style="background-color:#f1adad;">판매위치</th>
-                <th style="background-color:#f1adad;">가격</th>
-                <th style="background-color:#ec7272;">코드</th>
+                <th style="background-color:#A66D58;">음식</th>
+                <th style="background-color:#A66D58;">판매시간</th>
+                <th style="background-color:#A66D58;">판매위치</th>
+                <th style="background-color:#A66D58;">가격</th>
+                <th style="background-color:#A66D58;">코드</th>
               </tr>
             </thead>
             <tbody>
@@ -551,13 +564,13 @@
           <table style="width:100%">
             <caption></caption>
             <colgroup>
-              <col style="width:20%; background-color:#f1adad;">
+              <col style="width:20%; background-color:#A66D58;">
               <col style="width:80%;">
             </colgroup>
             <thead>
               <tr>
-                <th style="background-color:#f1adad;">종류</th>
-                <th style="background-color:#f1adad;">설명</th>
+                <th style="background-color:#A66D58;">종류</th>
+                <th style="background-color:#A66D58;">설명</th>
               </tr>
             </thead>
             <tbody>
@@ -614,19 +627,18 @@
         <hr />
         <section id="content4-6">
           <h2>04-6. 하이퍼링크 삽입하기</h2>
+          <p>클릭하면 연결된 곳으로 연결되는 기능</p>
+          <div class="code">
+            기본형 : &#60;a href="링크할 주소"&#62;링크를 걸 텍스트나 이미지&#60;/a&#62;
+          </div>
           <p>
-            클릭하면 연결된 곳으로 연결되는 기능
-            <span class="code">
-              기본형 : &#60;a href="링크할 주소"&#62;링크를 걸 텍스트나 이미지&#60;/a&#62;
-            </span> <br />
-            링크가 걸린 텍스트나 이미지에 마우스를 가져가면 마우스 포인터가 손가락으로 바뀜
-          </p>
-          <p>
-            속성 <br />
+            링크가 걸린 텍스트나 이미지에 마우스를 가져가면 마우스 포인터가 손가락으로 바뀜. <br />
+            <br/>
+            * 속성 <br />
             ㄴ target="_blank" : 새로운 탭에서 링크열기
           </p>
           <div class="test">
-            <a href="https://github.com/K-POPPY">👾 나의 GitHub</a>
+            <a href="https://github.com/K-POPPY" style="color: #F2F2F2;">👾 나의 GitHub</a>
           </div>
         </section>
     </main>

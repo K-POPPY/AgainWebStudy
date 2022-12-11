@@ -1,15 +1,34 @@
+/* Color Theme Swatches in Hex */
+.The-Female-Gaze-1-hex { color: #F2EFC4; }
+.The-Female-Gaze-2-hex { color: #A6A198; }
+.The-Female-Gaze-3-hex { color: #BF9969; }
+.The-Female-Gaze-4-hex { color: #A66D58; }
+.The-Female-Gaze-5-hex { color: #402A22; }
+/* Color Theme Swatches in Hex */
+.Yoondesign-Group-1-hex { color: #F2F2F2; }
+.Yoondesign-Group-2-hex { color: #BFBFBF; }
+.Yoondesign-Group-3-hex { color: #595959; }
+.Yoondesign-Group-4-hex { color: #262626; }
+.Yoondesign-Group-5-hex { color: #0D0D0D; }
+
 * {
   text-decoration: none;
 }
 body {
-  background-color: #333;
+  background-color: #402A22;
+}
+section{
+  margin: 50px 0 20px;
 }
 ul, ol {margin: 0; padding: 0;}
 #container {
   max-width : 940px;
   margin: 0 auto;
   padding: 30px;
-  background-color: #fffff0;
+  background-color: #F2EFC4;
+}
+h1 {
+  color: #402A22;
 }
 h1, h2 {
   text-align: center;
@@ -17,25 +36,24 @@ h1, h2 {
 span {
   display: inline-block;
 }
+a {
+  color: #402A22;
+}
+a:visited {
+  color: #A66D58;
+}
 .navGnb {
-  display: block;
-  width: 940px;
-  margin: 0 auto;
+  margin: 10px auto 40px;
   text-align: center;
 }
 .navGnb ul {
   list-style: none;
 }
 .navGnb>ul {
-  width: 940px;
-  height: 350px;
   margin: 0 auto;
 }
 .gnb1dep {
-  height: 40px;
-  width: 310px;
   float: left;
-  line-height: 40px;
   font-size: 25px;
 }
 .navGnb>ul:after {
@@ -44,9 +62,7 @@ span {
   clear: both;
 }
 .gnb2dep {
-  padding: 5px;
-  height: 35px;
-  line-height: 35px;
+  padding: 3px 5px;
   font-size: 18px;
 }
 .navGnb a {
@@ -58,10 +74,13 @@ nav.navLnb {
   top: 10px;
   right: 5px;
   width: 360px;
-  border: solid 1px #000000;
-  background-color: #faebd7;
+  border: solid 2px #000000;
+  background-color: #A66D58;
 }
-/* nav.navLnb ul {list-style-position:inside;} */
+.navLnb a {
+  color: #F2EFC4;
+}
+
 table {
   margin: 20px 0; 
 }
@@ -84,15 +103,17 @@ tr, th, td {
 .code {
   margin:10px 30px;
   padding:10px 30px;
-  background-color:#eee;
+  color: #F2F2F2;
+  background-color: #A6A198;
 }
 .test {
   padding: 10px;
-  background-color: #fcd7dd;
+  color: #F2F2F2;
+  background-color: #BF9969;
 }
 .quiz {
   margin-top: 20px;
   padding: 10px;
-  border: 3px solid #000;
-  background-color: #98b5e9;
+  border: 5px solid #402A22;
+  background-color: #BF9969;
 }
