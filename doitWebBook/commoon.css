@@ -33,6 +33,9 @@ h1 {
 h1, h2 {
   text-align: center;
 }
+h3 {
+  margin-top: 50px;
+}
 span {
   display: inline-block;
 }
@@ -90,6 +93,9 @@ table, tr, th, td {
 }
 tr, th, td {
   padding: 10px;
+}
+caption {
+  margin: 5px;
 }
 .img {
   float: left;
