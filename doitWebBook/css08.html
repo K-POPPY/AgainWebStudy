@@ -84,6 +84,24 @@
     .bor3 {
       border-width: 30px 10px 15px 5px;
     }
+    .imgRu {
+      border-radius: 96px;
+    }
+    .rd0, .rd1, .rd2, .rd3 {
+      background: #402A22;
+    } 
+    .rd0 {
+      border-radius: 50px 100px;
+    }
+    .rd1 {
+      border-bottom-right-radius: 120px 30px;
+    }
+    .rd2 {
+      border-top-left-radius: 70px 30px;
+    }
+    .rd3 {
+      border-bottom-left-radius: 50px 50px;
+    }
   </style>
 </head>
 
@@ -341,7 +359,33 @@
           border: 굵기 스타일 색상;
         </div>
 
-        <h3>4. </h3>
+        <h3>4. 둥근 테두리, boder-radius</h3>
+        <div class="code">
+          border-radius: 크기(px, em의 단위와 수치로 표시) | 백분율(현재 요소의 크기를 기준 으로 비율(%) 지정) <br/>
+          border-radius: 가로 반지름 / 세로 반지름; <br />  
+        </div>
+        <p>
+          * 이미지요소의 너비와 높이를 똑같이 만든 후 border-radius값은 너비, 높이 의 50%로 지정하면 원이 됨
+        </p>
+        <div class="test">
+          <p>
+            이미지 크기: 192px x 192px <br />
+            border-radius: 96px;
+          </p>
+          <img src="../images/img08_1.png" alt="양귀비일러스트">
+          <img class="imgRu" src="../images/img08_1.png" alt="양귀비일러스트">
+        </div>
+        <div class="code">
+          특정한 꼭짓점만 타원형태로 만들기: <br />
+          border-위치-radius: 가로반지름 세로반지름;
+        </div>
+        <img src="../images/img08-2.jpg" alt="각 꼭짓점을 나타내는 예약어">
+        <div class="test">
+          <span class="box rd0"></span>
+          <span class="box rd1"></span>
+          <span class="box rd2"></span>
+          <span class="box rd3"></span>
+        s</div>
       </section>
     </main>
   </div>
